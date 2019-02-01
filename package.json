@@ -14,7 +14,7 @@
   },
   "scripts": {
     "precommit": "tsc --noEmit && lint-staged",
-    "prepare": "yarn run clean && yarn run build",
+    "postinstall": "yarn run clean && yarn run build",
     "build": "tsc --project tsconfig.build.json",
     "new-integration-test": "ts-node integration-tests/newIntegrationTest.ts",
     "clean": "rimraf dist patch-package.test*.tgz",
